@@ -11,8 +11,9 @@ RUN apt-get update
 RUN apt-get install sudo -y
 RUN sudo -E apt-get clean
 RUN apt-get install wget -y
+RUN apt-get install curl -y
 RUN apt-get install nano -y
-RUN apt-get install git -y; git config --global color.ui false
+RUN apt-get install git -y; git config --global color.ui false; git config --global user.name "Brock555"; git config --global user.email "77067332+Brock5555@users.noreply.github.com"
 RUN wget https://raw.githubusercontent.com/Dazzler555/huiifzet/master/setup/android_build_env.sh
 RUN chmod a+x android_build_env.sh; bash android_build_env.sh
 RUN wget https://raw.githubusercontent.com/Dazzler555/huiifzet/master/setup/install_android_sdk.sh
